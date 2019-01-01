@@ -1,0 +1,61 @@
+server:
+  port: 6443
+  servlet:
+    context-path: /usercenter
+spring:
+  application:
+    name: USERCENTER
+  #MVC
+  #  mvc:
+  #    view:
+  #      prefix:
+  #      suffix:
+  #数据源
+  datasource:
+    hikari:
+      blog:
+        jdbc-url: jdbc:mysql://localhost:3306/blog
+        username: JackyShieh
+        password: 1001
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      share:
+        jdbc-url: jdbc:mysql://localhost:3306/share
+        username: JackyShieh
+        password: 1001
+        driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/blog
+#    username: JackyShieh
+#    password: 1001
+#多数据源事务管理配置
+  xa:
+    datasource:
+      share:
+        url: jdbc:mysql://localhost:3306/share
+        username: JackyShieh
+        password: 1001
+        minPoolSize: 100
+        maxPoolSize: 100
+        maxLifetime: 120
+        borrowConnectionTimeout: 60
+        loginTimeout: 10
+        maintenanceInterval: 60
+        maxIdleTime: 30
+        testQuery:
+      blog:
+        url: jdbc:mysql://localhost:3306/blog
+        username: JackyShieh
+        password: 1001
+        minPoolSize: 100
+        maxPoolSize: 100
+        maxLifetime: 120
+        borrowConnectionTimeout: 60
+        loginTimeout: 10
+        maintenanceInterval: 60
+        maxIdleTime: 30
+        testQuery:
+
+
+
+
