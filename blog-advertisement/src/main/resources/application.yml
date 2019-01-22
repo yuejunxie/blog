@@ -1,0 +1,3 @@
+spring:
+  redisson:
+    config-file.json: classpath:redisson.json
