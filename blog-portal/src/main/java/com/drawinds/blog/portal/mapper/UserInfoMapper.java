@@ -14,9 +14,9 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface UserInfoMapper {
 
-    @SelectProvider(type = UserInfoProvider.class,method = "findByAccount")
+    @SelectProvider(type = UserInfoProvider.class, method = "findByAccount")
     UserInfo findByAccount(@Param("account") String account);
 
-    @Insert("insert into user_info where id='xxx'")
+    @Insert("insert into uc_user_info (username) values (#{username})")
     int addUser(UserInfo userInfo);
 }

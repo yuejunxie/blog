@@ -15,7 +15,7 @@ import org.apache.ibatis.jdbc.SQL;
 public class UserInfoProvider {
 
     public String findByAccount() {
-        String sql = new SQL().SELECT("id","account","nick_name","name","birthday").FROM("user_info").WHERE("account=#{account}").toString();
+        String sql = new SQL().SELECT("id","account","nick_name","name","birthday").FROM("uc_user_info").WHERE("account=#{account}").toString();
         return sql.toString();
     }
 }

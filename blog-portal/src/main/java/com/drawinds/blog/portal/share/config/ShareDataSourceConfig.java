@@ -20,7 +20,7 @@ import javax.sql.DataSource;
  * Created: 2018/12/29 22:21
  * Description:
  */
-@Configuration
+//@Configuration
 public class ShareDataSourceConfig {
 
     @Bean

@@ -1,7 +1,7 @@
 package com.drawinds.blog.portal;
 
-import com.drawinds.blog.portal.config.xa.DBConfig;
-import com.drawinds.blog.portal.share.config.xa.ShareDBConfig;
+import com.drawinds.blog.portal.config.xa.XADBConfig;
+import com.drawinds.blog.portal.share.config.xa.ShareXADBConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -18,7 +18,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 //@EnableHystrixDashboard
 //@EnableFeignClients
 //@EnableCircuitBreaker
-@EnableConfigurationProperties({DBConfig.class, ShareDBConfig.class})
+@EnableConfigurationProperties({XADBConfig.class, ShareXADBConfig.class})
 @SpringBootApplication
 public class PortalApplication {
 

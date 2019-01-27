@@ -1,4 +1,4 @@
-package com.drawinds.blog.portal.share.config.xa;
+package com.drawinds.blog.portal.config.xa;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -12,8 +12,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * Description:
  */
 @Data
-@ConfigurationProperties("spring.xa.datasource.share")
-public class ShareDBConfig {
+@ConfigurationProperties("spring.xa.datasource.blog")
+public class XADBConfig {
     private String url;
 
     private String username;

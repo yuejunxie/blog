@@ -1,7 +1,6 @@
 package com.drawinds.blog.portal.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
@@ -15,11 +14,18 @@ import java.util.Date;
  */
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserInfo {
     /*
      * 主键
      */
-    private String id;
+    private Integer id;
+    /*
+     * 用户名
+     */
+    @NonNull
+    private String username;
     /*
      * 账号
      */
@@ -29,7 +35,15 @@ public class UserInfo {
      */
     private String nickName;
     /*
-     * 名字
+     *身份证号码
+     */
+    private String identification;
+    /*
+     * 姓
+     */
+    private String surname;
+    /*
+     * 名
      */
     private String name;
     /*
@@ -37,39 +51,43 @@ public class UserInfo {
      */
     private Date birthday;
     /*
-     *微信号
+     * 微信号
      */
     private String wechat;
     /*
+     * QQ号
+     */
+    private String qq;
+    /*
      * 手机号码
      */
-    private String phone;
+    private String telephone;
     /*
-     *邮箱
+     * 手机号码
+     */
+    private String mobilePhone;
+    /*
+     * 邮箱
      */
     private String email;
     /*
-     *身份证号码
-     */
-    private String identification;
-    /*
-     *记录创建时间
+     * 创建时间
      */
     private Date created;
     /*
-     *记录修改时间
-     */
-    private Date modified;
-    /*
-     *记录创建人
+     * 创建人
      */
     private String createdBy;
     /*
-     *记录修改时间
+     * 修改时间
      */
-    private String modifyBy;
+    private Date modified;
+    /*
+     * 修改人
+     */
+    private String modifiedBy;
     /*
      * 数据有效性
      */
-    private Boolean data_valid = true;
+    private Boolean dataValid = true;
 }

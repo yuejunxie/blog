@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Description:
  */
 @Service
-@Transactional
+@Transactional()
 public class UserInfoServiceImpl implements UserInfoService {
 
     @Autowired
@@ -29,7 +29,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     }
 
     @Override
-    public int addUser() {
-        return userInfoMapper.addUser(new UserInfo());
+    public int addUser(String username) {
+        return userInfoMapper.addUser(new UserInfo(username));
     }
 }

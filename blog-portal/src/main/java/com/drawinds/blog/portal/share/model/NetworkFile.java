@@ -1,8 +1,6 @@
 package com.drawinds.blog.portal.share.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
@@ -17,22 +15,27 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@RequiredArgsConstructor
 public class NetworkFile {
-    private String id;
 
+    private Integer id;
+
+    @NonNull
     private String name;
 
+    @NonNull
     private String storageType;
 
+    @NonNull
     private String location;
 
     private Date created;
 
-    private String createBy;
+    private String createdBy;
 
     private Date modified;
 
-    private String modifyBy;
+    private String modifiedBy;
 
     private Boolean dataValid = true;
 

@@ -19,5 +19,5 @@ public interface UserInfoService {
      */
     UserInfo getByAccount(String account);
 
-    int addUser();
+    int addUser(String username);
 }

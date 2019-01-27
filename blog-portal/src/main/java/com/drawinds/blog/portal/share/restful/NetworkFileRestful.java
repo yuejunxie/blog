@@ -1,7 +1,9 @@
 package com.drawinds.blog.portal.share.restful;
 
 import com.drawinds.blog.portal.share.model.NetworkFile;
+import com.drawinds.blog.portal.share.service.MixService;
 import com.drawinds.blog.portal.share.service.NetworkFileService;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,6 +28,9 @@ public class NetworkFileRestful {
     @Autowired
     private NetworkFileService networkFileService;
 
+    @Autowired
+    private MixService mixService;
+
     @GetMapping
     public NetworkFile getNetworkFileById(String id) {
         return networkFileService.getNetworkFileById(id);
@@ -33,7 +38,12 @@ public class NetworkFileRestful {
 
     @PostMapping
     public int addNetworkFile() {
-        NetworkFile networkFile = new NetworkFile("1224s3s56", "软件目录", "DISK", "D://Program Files", new Date(), "xuanyijun", new Date(), "xuanyijun", true);
+        NetworkFile networkFile = new NetworkFile("软件目录", "DISK", "D://Program Files");
         return networkFileService.addNetworkFile(networkFile);
+    }
+
+    @PostMapping("/mix")
+    public void mix(){
+        mixService.mixAdd();
     }
 }

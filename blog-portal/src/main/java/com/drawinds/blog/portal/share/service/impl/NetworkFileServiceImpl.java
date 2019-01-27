@@ -1,5 +1,7 @@
 package com.drawinds.blog.portal.share.service.impl;
 
+import com.drawinds.blog.portal.mapper.UserInfoMapper;
+import com.drawinds.blog.portal.model.UserInfo;
 import com.drawinds.blog.portal.share.mapper.NetworkFileMapper;
 import com.drawinds.blog.portal.share.model.NetworkFile;
 import com.drawinds.blog.portal.share.service.NetworkFileService;
@@ -30,10 +32,10 @@ public class NetworkFileServiceImpl implements NetworkFileService {
     }
 
     @Override
-    @Cacheable
     public int addNetworkFile(NetworkFile networkFile) {
         int i = networkFileMapper.addNetworkFile(networkFile);
         throw new RuntimeException();
 //        return i;
     }
+
 }

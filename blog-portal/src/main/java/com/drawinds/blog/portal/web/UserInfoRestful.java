@@ -29,8 +29,8 @@ public class UserInfoRestful {
     }
 
     @GetMapping("/add")
-    public int addUser() {
-        return userInfoService.addUser();
+    public int addUser(String username) {
+        return userInfoService.addUser(username);
     }
 
 }

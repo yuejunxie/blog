@@ -1,6 +1,7 @@
 package com.drawinds.blog.portal.share.mapper;
 
 import com.drawinds.blog.portal.share.model.NetworkFile;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.InsertProvider;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -19,6 +20,6 @@ public interface NetworkFileMapper {
     @Select("SELECT * FROM network_file WHERE id = #{id}")
     NetworkFile getNetworkFileById(String id);
 
-    @InsertProvider(type = NetworkFileProvider.class,method = "addNetworkFile")
+    @Insert("INSERT INTO network_file (name, storage_type, location) VALUES (#{name}, #{storageType}, #{location})")
     int addNetworkFile(NetworkFile networkFile);
 }
