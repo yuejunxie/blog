@@ -28,7 +28,7 @@ import java.io.IOException;
  * Created: 2019/1/27 21:58
  * Description:
  */
-@Configuration
+//@Configuration
 public class SecurityConfig {
 
     @Autowired

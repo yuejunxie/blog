@@ -25,7 +25,7 @@ import java.io.IOException;
  * Created: 2019/1/27 22:51
  * Description:
  */
-@Configuration
+//@Configuration
 @Slf4j
 public class PasswordEncoderConfig {
 
