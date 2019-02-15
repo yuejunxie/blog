@@ -1,0 +1,13 @@
+server:
+  port: 8088
+  servlet:
+    context-path: /ad
+
+spring:
+  application:
+    name: ad
+  rabbitmq:
+    host: localhost
+    username: guest
+    password: guest
+    virtual-host: /

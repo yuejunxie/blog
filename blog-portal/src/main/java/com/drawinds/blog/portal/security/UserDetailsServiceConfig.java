@@ -16,7 +16,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * Created: 2019/1/27 22:24
  * Description:
  */
-@Configuration
+//@Configuration
 public class UserDetailsServiceConfig {
 
     @Autowired
@@ -25,7 +25,7 @@ public class UserDetailsServiceConfig {
     @Bean
     public UserDetailsService userDetailsService() {
         return username -> new User(username, passwordEncoder.encode("123456"),
-                AuthorityUtils.commaSeparatedStringToAuthorityList("admin"));
+                AuthorityUtils.commaSeparatedStringToAuthorityList("WebSecurityConfigurerAdapter"));
     }
 
 
