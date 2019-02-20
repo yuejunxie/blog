@@ -1,6 +1,5 @@
-package com.drawinds.blog.advetisement;
+package com.drawinds.blog.configs;
 
-import org.redisson.spring.session.config.EnableRedissonHttpSession;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,13 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Corporation: Drawinds LTD
  * WE FLY WE DREAM
  * blog
- * Created: 2019/1/13 19:19
+ * Created: 2019/2/15 20:34
  * Description:
  */
 @SpringBootApplication
-@EnableRedissonHttpSession
-public class AdvertisementApplication {
+public class ConfigsApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(AdvertisementApplication.class, args);
+        SpringApplication.run(ConfigsApplication.class,args);
     }
 }

@@ -1,0 +1,9 @@
+server:
+  port: 8008
+  servlet:
+    context-path: /configs
+spring:
+  banner:
+#    location: banner.png
+  main:
+    banner-mode: console

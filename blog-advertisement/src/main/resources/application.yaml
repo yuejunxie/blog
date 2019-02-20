@@ -11,3 +11,5 @@ spring:
     username: guest
     password: guest
     virtual-host: /
+  redisson:
+    config-file.json: classpath:redisson.json

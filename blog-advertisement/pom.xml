@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>blog-advertisement</artifactId>
-    <name></name>
+    <name>advertisement</name>
     <description></description>
 
     <dependencies>

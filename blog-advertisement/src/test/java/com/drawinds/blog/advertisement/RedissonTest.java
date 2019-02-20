@@ -1,4 +1,4 @@
-package com.drawinds.blog.advetisement;
+package com.drawinds.blog.advertisement;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

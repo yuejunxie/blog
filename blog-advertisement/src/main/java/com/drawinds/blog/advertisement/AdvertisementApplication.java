@@ -1,5 +1,6 @@
 package com.drawinds.blog.advertisement;
 
+import org.redisson.spring.session.config.EnableRedissonHttpSession;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -12,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Description:
  */
 @SpringBootApplication
+@EnableRedissonHttpSession
 public class AdvertisementApplication {
 
     public static void main(String[] args) {
