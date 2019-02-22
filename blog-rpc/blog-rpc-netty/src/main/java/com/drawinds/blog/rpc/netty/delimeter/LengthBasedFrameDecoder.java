@@ -1,4 +1,4 @@
-package com.drawinds.blog.grpc.netty.delimeter;
+package com.drawinds.blog.rpc.netty.delimeter;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.*;

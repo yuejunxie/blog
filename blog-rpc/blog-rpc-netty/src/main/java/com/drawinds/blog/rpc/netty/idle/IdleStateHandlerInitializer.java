@@ -1,4 +1,4 @@
-package com.drawinds.blog.grpc.netty.idle;
+package com.drawinds.blog.rpc.netty.idle;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;

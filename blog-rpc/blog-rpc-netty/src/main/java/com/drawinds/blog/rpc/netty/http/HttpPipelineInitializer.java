@@ -1,4 +1,4 @@
-package com.drawinds.blog.grpc.netty.http;
+package com.drawinds.blog.rpc.netty.http;
 
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelInitializer;
