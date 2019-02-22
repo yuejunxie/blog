@@ -13,7 +13,6 @@
         <module>blog-advertisement</module>
         <module>blog-api</module>
         <module>blog-api</module>
-        <module>blo-grpc</module>
         <module>blog-rpc</module>
     </modules>
 
@@ -25,7 +24,7 @@
 
     <groupId>com.drawinds.blog</groupId>
     <artifactId>blog</artifactId>
-    <version>${project.version}</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <developers>
@@ -111,6 +110,11 @@
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
                 <!--<version>${netty.version}</version>-->
+                <version>RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>io.grpc</groupId>
+                <artifactId>grpc-all</artifactId>
                 <version>RELEASE</version>
             </dependency>
         </dependencies>

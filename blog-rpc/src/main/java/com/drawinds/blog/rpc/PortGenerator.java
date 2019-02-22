@@ -1,4 +1,4 @@
-package com.drawinds.blog.grpc;
+package com.drawinds.blog.rpc;
 
 import lombok.extern.slf4j.Slf4j;
 

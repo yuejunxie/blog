@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.drawinds.blog.rpc.grpc";
+
+message UserParam {
+    string code=1;
+    int32 pageNo=2;
+    int32 pageSize=3;
+}
+
+message UserInfo {
+    string name=1;
+}
+
+service UserService{
+    rpc userDetails(UserParam) returns (UserInfo);
+}
