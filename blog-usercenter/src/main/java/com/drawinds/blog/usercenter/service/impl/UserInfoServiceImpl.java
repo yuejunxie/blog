@@ -5,7 +5,6 @@ import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import org.json.JSONObject;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -27,7 +26,8 @@ public class UserInfoServiceImpl implements UserInfoService {
         //1.添加订单记录
         String orderId = UUID.randomUUID().toString();
         String sql = "insert into table_order (order_id,user_id,order_content,create_time) values (?,?,?,now())";
-        int count = this.getJdbcTemplate().update(sql, new Object[]{orderId, userId, orderContent});
+//        int count = this.getJdbcTemplate().update(sql, new Object[]{orderId, userId, orderContent});
+        int count = 0;
         if (count != 1) {
             throw new Exception("订单创建失败，原因[数据库操作失败]");
         }
