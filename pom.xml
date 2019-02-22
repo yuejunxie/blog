@@ -11,6 +11,10 @@
         <module>blog-configs</module>
         <module>blog-gateway</module>
         <module>blog-advertisement</module>
+        <module>blog-api</module>
+        <module>blog-api</module>
+        <module>blo-grpc</module>
+        <module>blog-rpc</module>
     </modules>
 
     <parent>
@@ -21,7 +25,7 @@
 
     <groupId>com.drawinds.blog</groupId>
     <artifactId>blog</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${project.version}</version>
     <packaging>pom</packaging>
 
     <developers>
@@ -35,6 +39,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.version>1.0-SNAPSHOT</project.version>
         <java.version>1.8</java.version>
         <netty.version>4.1.33.Final</netty.version>
         <grpc.version>1.18.0</grpc.version>

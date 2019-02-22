@@ -1,0 +1,10 @@
+server:
+  port: 80800
+  servlet:
+    context-path: /rpc
+
+spring:
+  application:
+    name: rpc
+  profiles:
+    active: prod
