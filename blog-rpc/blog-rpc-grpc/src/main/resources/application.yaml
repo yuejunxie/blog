@@ -1,10 +1,10 @@
 server:
   port: 80800
   servlet:
-    context-path: /rpc
+    context-path: /lock
 
 spring:
   application:
-    name: rpc
+    name: lock
   profiles:
     active: prod

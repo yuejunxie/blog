@@ -12,6 +12,13 @@ message UserInfo {
     string name=1;
 }
 
+message Role{
+    string name=1;
+}
+
 service UserService{
+
     rpc userDetails(UserParam) returns (UserInfo);
+
+    rpc userRole(UserParam) returns (Role);
 }

@@ -1,5 +1,9 @@
-package com.drawinds.blog.rpc.grpc;
+package com.drawinds.blog.rpc.grpc.user;
 
+import com.drawinds.blog.rpc.grpc.Role;
+import com.drawinds.blog.rpc.grpc.UserInfo;
+import com.drawinds.blog.rpc.grpc.UserParam;
+import com.drawinds.blog.rpc.grpc.UserServiceGrpc;
 import io.grpc.stub.StreamObserver;
 
 /**
@@ -22,6 +26,20 @@ public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
                 .toString();
         UserInfo userInfo = UserInfo.newBuilder().setName(greeting).build();
         responseObserver.onNext(userInfo);
+        responseObserver.onCompleted();
+    }
+
+    @Override
+    public void userRole(UserParam request, StreamObserver<Role> responseObserver) {
+        String greeting = new StringBuilder()
+                .append("Hello, ")
+                .append(request.getCode())
+                .append(" ")
+                .append(request.getPageNo())
+                .append(request.getPageSize())
+                .toString();
+        Role role = Role.newBuilder().setName("role" + greeting).build();
+        responseObserver.onNext(role);
         responseObserver.onCompleted();
     }
 }
