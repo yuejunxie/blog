@@ -1,4 +1,4 @@
-package com.drawinds.blog.rpc.grpc;
+package com.drawinds.blog.rpc.grpc.user;
 
 import io.grpc.Server;
 import io.grpc.ServerBuilder;

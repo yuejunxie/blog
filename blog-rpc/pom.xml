@@ -14,5 +14,6 @@
     <modules>
         <module>blog-rpc-netty</module>
         <module>blog-rpc-grpc</module>
+        <module>blog-rpc-zookeeper</module>
     </modules>
 </project>
