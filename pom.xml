@@ -12,10 +12,12 @@
         <module>blog-gateway</module>
         <module>blog-advertisement</module>
         <module>blog-api</module>
-        <module>blog-api</module>
         <module>blog-rpc</module>
         <module>blog-mq</module>
         <module>blog-lock</module>
+        <module>blog-cache</module>
+        <module>blog-dubbo</module>
+        <module>blog-agent</module>
     </modules>
 
     <parent>
@@ -42,10 +44,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.version>1.0-SNAPSHOT</project.version>
         <java.version>1.8</java.version>
-        <netty.version>4.1.33.Final</netty.version>
-        <grpc.version>1.18.0</grpc.version>
-        <mysql.version>8.0.15</mysql.version>
-        <swagger.version>2.9.2</swagger.version>
+        <!--<netty.version>4.1.33.Final</netty.version>-->
+        <!--<grpc.version>1.18.0</grpc.version>-->
+        <!--<mysql.version>8.0.15</mysql.version>-->
+        <!--<swagger.version>2.9.2</swagger.version>-->
     </properties>
 
     <dependencies>
@@ -58,11 +60,6 @@
             <artifactId>lombok</artifactId>
             <version>RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>io.minio</groupId>
-            <artifactId>minio</artifactId>
-            <version>RELEASE</version>
-        </dependency>
         <!--<dependency>-->
         <!--<groupId>org.springframework.boot</groupId>-->
         <!--<artifactId>spring-boot-devtools</artifactId>-->
@@ -72,7 +69,13 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.8.1</version>
+            <version>RELEASE</version>
+        </dependency>
+        <!--GUAVA-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>RELEASE</version>
         </dependency>
 
     </dependencies>
@@ -83,7 +86,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.SR2</version>
+                <version>RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -110,11 +113,7 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-all</artifactId>
-                <version>${grpc.version}</version>
-            </dependency>
+            <!--gRpc-->
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
@@ -124,6 +123,7 @@
             <dependency>
                 <groupId>io.grpc</groupId>
                 <artifactId>grpc-all</artifactId>
+                <!--<version>${grpc.version}</version>-->
                 <version>RELEASE</version>
             </dependency>
             <!--ZK-->
@@ -136,7 +136,37 @@
             <dependency>
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-framework</artifactId>
-                <version>4.0.1</version>
+                <version>RELEASE</version>
+            </dependency>
+            <!--Curator-->
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>apache-curator</artifactId>
+                <version>RELEASE</version>
+                <type>pom</type>
+            </dependency>
+            <!--Jedis-->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>RELEASE</version>
+            </dependency>
+            <!--Redisson-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson</artifactId>
+                <version>RELEASE</version>
+            </dependency>
+            <!--Minio-->
+            <dependency>
+                <groupId>io.minio</groupId>
+                <artifactId>minio</artifactId>
+                <version>RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -149,12 +179,12 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <!--<plugin>-->
-                <!--<artifactId>maven-compiler-plugin</artifactId>-->
-                <!--<configuration>-->
-                    <!--<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>-->
-                    <!--<source>1.8</source>-->
-                    <!--<target>1.8</target>-->
-                <!--</configuration>-->
+            <!--<artifactId>maven-compiler-plugin</artifactId>-->
+            <!--<configuration>-->
+            <!--<jvmArguments>-Dfile.encoding=UTF-8</jvmArguments>-->
+            <!--<source>1.8</source>-->
+            <!--<target>1.8</target>-->
+            <!--</configuration>-->
             <!--</plugin>-->
         </plugins>
     </build>

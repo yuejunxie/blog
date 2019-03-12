@@ -1,0 +1,53 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /registry
+spring:
+  application:
+    name: registry
+  cloud:
+    #Zookeeper
+    zookeeper:
+      connect-string: localhost:2181
+      prefix:
+      max-retries: 10
+      max-sleep-ms: 500
+      dependencies:
+      dependency-names:
+      discovery:
+        enabled: false
+        instance-host: localhost
+        instance-port:
+        instance-id:
+        root:
+        register: true
+        initial-status:
+#EUREKA
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: ${eureka.instance.hostname}-${spring.application.name}:${server.port}-@project.version@
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds:
+    lease-expiration-duration-in-seconds:
+    health-check-url:
+    health-check-url-path:
+    home-page-url:
+    home-page-url-path:
+    status-page-url:
+    status-page-url-path:
+  dashboard:
+    enabled: true
+    path: /
+  server:
+    enable-self-preservation: false
+    delta-retention-timer-interval-in-ms:
+    eviction-interval-timer-in-ms:
+  client:
+    enabled: true
+    fetch-registry: false
+    register-with-eureka: false
+    service-url: http://${eureka.instance.hostname}:${server.port}/eureka
+    heartbeat-executor-thread-pool-size: 2
+    heartbeat-executor-exponential-back-off-bound: 10
+

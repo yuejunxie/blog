@@ -21,4 +21,11 @@ service UserService{
     rpc userDetails(UserParam) returns (UserInfo);
 
     rpc userRole(UserParam) returns (Role);
+
+    rpc serverStreamUserDerails(UserParam) returns (stream UserInfo){};
+
+    rpc clientStreamUserDerails(stream UserParam) returns (UserInfo){};
+
+    rpc biStreamUserDerails(stream UserParam) returns (stream UserInfo){};
+
 }

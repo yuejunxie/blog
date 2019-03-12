@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "PageParam.proto";
+import "google/protobuf/any.proto";
+//package org.cooze.grpc.entity;
+option java_package = "com.drawinds.blog.rpc.grpc.common";
+option java_multiple_files = true;
+//option java_outer_classname = "Pagination";
+
+message Pagination {
+    repeated string rows = 1;
+    string message = 2;
+    PageParam pageParam = 3;
+    repeated google.protobuf.Any details = 4;
+}

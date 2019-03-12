@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.drawinds.blog.rpc.grpc";
+
+message Person {
+    string myName=1;
+}
+
+message Result{
+    string string=1;
+}
+
+service PersonService{
+
+    rpc simpleHello(Person) returns (Result) {}
+
+    rpc serverStreamHello(Person) returns (stream Result) {}
+
+    rpc clientStreamHello(stream Person) returns (Result) {}
+
+    rpc biStreamHello(stream Person) returns (stream Result) {}
+
+}
