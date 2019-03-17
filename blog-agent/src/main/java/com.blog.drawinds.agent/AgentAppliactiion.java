@@ -13,14 +13,15 @@ import java.util.List;
  */
 public class AgentAppliactiion {
 
-    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
+    public static void main(String[] args) {
         MemoryMXBean memoryMXBean = ManagementFactory.getMemoryMXBean();
         memoryMXBean.gc();
         List<MemoryManagerMXBean> memoryManagerMXBeans = ManagementFactory.getMemoryManagerMXBeans();
         memoryManagerMXBeans.forEach(memoryManagerMXBean -> memoryManagerMXBean.getMemoryPoolNames());
         ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
-        threadMXBean.dumpAllThreads(false,false);
+        threadMXBean.dumpAllThreads(false, false);
         List<GarbageCollectorMXBean> garbageCollectorMXBeans = ManagementFactory.getGarbageCollectorMXBeans();
         garbageCollectorMXBeans.forEach(garbageCollectorMXBean -> garbageCollectorMXBean.getCollectionCount());
+
     }
 }
