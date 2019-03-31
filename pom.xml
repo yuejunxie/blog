@@ -18,6 +18,8 @@
         <module>blog-cache</module>
         <module>blog-dubbo</module>
         <module>blog-agent</module>
+        <module>blog-source</module>
+        <module>blog-design</module>
     </modules>
 
     <parent>

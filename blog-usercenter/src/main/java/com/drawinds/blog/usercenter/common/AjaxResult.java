@@ -1,6 +1,8 @@
 package com.drawinds.blog.usercenter.common;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
@@ -13,10 +15,16 @@ import java.io.Serializable;
  * Description:
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AjaxResult<T> implements Serializable {
-    private long code;
+    private long code = 0x00000001;
 
     private T data;
 
     private String message;
+
+    public AjaxResult(T data) {
+        this.data = data;
+    }
 }
