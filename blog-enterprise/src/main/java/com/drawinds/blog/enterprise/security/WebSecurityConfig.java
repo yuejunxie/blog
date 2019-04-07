@@ -64,7 +64,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .and().rememberMe().tokenValiditySeconds(1209600).key("cook")
 //                .and().logout().logoutUrl("/logout").logoutSuccessUrl("/logout?success").permitAll();
 //        super.configure(http);
-        http.authorizeRequests().antMatchers("/**/cloud/*").permitAll().anyRequest().authenticated()
+        http.authorizeRequests().antMatchers("/**/api/*").permitAll().anyRequest().authenticated()
                 .and().formLogin().defaultSuccessUrl("/index").permitAll().and().rememberMe().alwaysRemember(false).tokenValiditySeconds(10).key("cook")
                 .and().logout().permitAll();
 
