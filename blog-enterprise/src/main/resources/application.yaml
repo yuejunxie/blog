@@ -24,5 +24,18 @@ spring:
     generate-ddl: true
     hibernate:
       ddl-auto: update
-
-
+#logging:
+#  level: trace
+#  config:
+#  path:
+#  pattern:
+#    level:
+#    console:
+#    file:
+#    dateformat:
+#  file:
+#    max-history:
+#    max-size:
+#  group:
+#  exception-conversion-word:
+#  register-shutdown-hook: true

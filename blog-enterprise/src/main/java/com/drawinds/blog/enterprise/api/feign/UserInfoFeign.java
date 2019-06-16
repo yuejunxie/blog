@@ -1,8 +1,6 @@
 package com.drawinds.blog.enterprise.api.feign;
 
 import com.drawinds.blog.api.usercenter.api.UserInfoApi;
-import com.netflix.ribbon.proxy.annotation.Hystrix;
-import org.springframework.cloud.openfeign.FeignClient;
 
 /**
  * Author: JackyShieh
@@ -12,8 +10,8 @@ import org.springframework.cloud.openfeign.FeignClient;
  * Created: 2019/4/7 13:30
  * Description:
  */
-@FeignClient(name = "usercenter")
-@Hystrix
+//@FeignClient(name = "usercenter")
+//@Hystrix
 public interface UserInfoFeign extends UserInfoApi {
 
 }
